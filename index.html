@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabbir Ahmmed - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: rgb(249, 250, 251);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .image-container {
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .greeting {
+            font-size: 1.25rem;
+            color: #4B5563;
+        }
+
+        .name {
+            font-size: 2.25rem;
+            font-weight: bold;
+            color: #2B4595;
+            margin-top: 0.5rem;
+        }
+
+        .description {
+            font-size: 1.125rem;
+            color: #4B5563;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .social-link:hover {
+            opacity: 0.9;
+        }
+
+        .facebook { background-color: #1877F2; }
+        .twitter { background-color: #000000; }
+        .instagram { background-color: #E4405F; }
+        .linkedin { background-color: #0A66C2; }
+
+        .cta-box {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .link {
+            color: #2B4595;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="grid">
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1708984949259-1b9a6d6ff0d9" alt="Profile" class="profile-image">
+            </div>
+            
+            <div class="content">
+                <div>
+                    <h2 class="greeting">Hi there 👋</h2>
+                    <h1 class="name">I'm Sabbir Ahmmed</h1>
+                </div>
+
+                <p class="description">
+
+                    I'm a passionate and self-motivated programmer with a deep understanding of OOP, PHP, MySQL, and JavaScript. With over three years of hands-on experience in Front-End Design for web templates and applications, I specialize in turning ideas into reality. If you need anything on the frontend, I can bring it to life using JavaScript, HTML, and CSS (where technically feasible).
+
+I have 1+ years of experience in the Laravel framework, enabling me to develop secure, efficient, and scalable applications with clean, well-documented code.
+
+I excel in WordPress plugin development, crafting custom solutions to enhance functionality and user experience.
+
+Beyond development, I transform innovative ideas into fully functional applications in PHP, MySQL, and JavaScript—provided they are validated—leveraging both my professional expertise and institutional knowledge.
+                </p>
+
+                <p class="description">
+                    I started <a href="AlShariah.co" class="link">@AlShariah.co</a> at 2025
+                </p>
+
+                <div class="social-links">
+                    <a href="#" class="social-link facebook">fb</a>
+                    <a href="#" class="social-link twitter">tw</a>
+                    <a href="#" class="social-link instagram">in</a>
+                    <a href="https://www.linkedin.com/in/ahmmedsabbirbd/" target="_blank" class="social-link linkedin">li</a>
+                </div>
+
+                <div class="cta-box">
+                    <p class="description">
+                        Check out some my company products from 
+                        <a href="AlShariah.co" class="link">AlShariah</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
