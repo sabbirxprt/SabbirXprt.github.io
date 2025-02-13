@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabbir Ahmmed - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -40,12 +41,13 @@
         .image-container {
             border-radius: 0.5rem;
             overflow: hidden;
+            height: 600px;
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
         }
 
         .profile-image {
             width: 100%;
-            height: 600px;
+            height: 100%;
             object-fit: cover;
         }
 
@@ -99,22 +101,42 @@
         .instagram { background-color: #E4405F; }
         .linkedin { background-color: #0A66C2; }
 
-        .cta-box {
+        .products-section {
             margin-top: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: #2B4595;
+            margin-bottom: 1rem;
+        }
+
+        .product-list {
+            list-style: none;
+        }
+
+        .product-item {
+            margin-bottom: 1rem;
             padding: 1rem;
             background-color: white;
             border-radius: 0.5rem;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
-        .link {
+        .product-title {
             color: #2B4595;
             font-weight: 600;
             text-decoration: none;
         }
 
-        .link:hover {
+        .product-title:hover {
             text-decoration: underline;
+        }
+
+        .product-description {
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+            color: #4B5563;
         }
     </style>
 </head>
@@ -122,42 +144,61 @@
     <div class="container">
         <div class="grid">
             <div class="image-container">
-                <img src="https://images.unsplash.com/photo-1708984949259-1b9a6d6ff0d9" alt="Profile" class="profile-image">
+                <img src="./ahmmedsabbirbd.jpg" alt="Profile" class="profile-image">
             </div>
             
             <div class="content">
                 <div>
                     <h2 class="greeting">Hi there 👋</h2>
-                    <h1 class="name">I'm Sabbir Ahmmed</h1>
+                    <h1 class="name">I'm Sabbir</h1>
                 </div>
 
                 <p class="description">
-
-                    I'm a passionate and self-motivated programmer with a deep understanding of OOP, PHP, MySQL, and JavaScript. With over three years of hands-on experience in Front-End Design for web templates and applications, I specialize in turning ideas into reality. If you need anything on the frontend, I can bring it to life using JavaScript, HTML, and CSS (where technically feasible).
-
-I have 1+ years of experience in the Laravel framework, enabling me to develop secure, efficient, and scalable applications with clean, well-documented code.
-
-I excel in WordPress plugin development, crafting custom solutions to enhance functionality and user experience.
-
-Beyond development, I transform innovative ideas into fully functional applications in PHP, MySQL, and JavaScript—provided they are validated—leveraging both my professional expertise and institutional knowledge.
+                    I'm a passionate developer who loves coding, problem-solving, and building scalable SaaS business solutions using PHP, MySQL, and JavaScript.
                 </p>
 
                 <p class="description">
-                    <!-- I started <a href="AlShariah.co" class="link">@AlShariah.co</a> at 2025 -->
+                    I specialize in turning ideas into reality—whether through standalone SaaS applications (Laravel or other industry-standard technologies) or WordPress plugin-based solutions, ensuring innovation and scalability.
                 </p>
+
+                <div class="products-section">
+                    <h3 class="section-title">🚀 Contributed Products</h3>
+                    <ul class="product-list">
+                        <li class="product-item">
+                            <a href="https://wordpress.org/plugins/stock-notifier-for-woocommerce" class="product-title">🌓 Stock Notifier for WooCommerce</a>
+                            <p class="product-description">Back in Stock Notifier for WooCommerce with easy in-stock notifications and multi-vendor support.</p>
+                        </li>
+                        <li class="product-item">
+                            <span class="product-title">Themeforest Contributions:</span>
+                            <p class="product-description">
+                                <a href="https://themeforest.net/item/consulter-business-consulting-html-template/41326996" class="product-title">Consulter</a>,
+                                <a href="https://themeforest.net/item/xlab-business-consulting-html5-template/50177459" class="product-title">Xlab</a>,
+                                <a href="https://themeforest.net/item/artima-modern-architecture-interior-html5-template/54285142" class="product-title">Artima</a>,
+                                <a href="https://themeforest.net/item/ribuild-construction-company-html5-template/54135702" class="product-title">Ribuild</a>,
+                                <a href="https://themeforest.net/item/delish-restaurant-cafe-html5-template/52939405" class="product-title">Delish</a>,
+                                <a href="https://themeforest.net/item/zimis-data-science-analytics-html5-template/53536590" class="product-title">Zimis</a>,
+                                <a href="https://themeforest.net/item/medilix-healthcare-medical-bootstrap-html5-template/52371912" class="product-title">Medilix</a>,
+                                <a href="https://themeforest.net/item/weta-saas-landing-html5-template/51371905" class="product-title">WETA</a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="products-section">
+                    <h3 class="section-title">My Products</h3>
+                    <ul class="product-list">
+                        <li class="product-item">
+                            <a href="#" class="product-title">🌓 BizAutomateX</a>
+                            <p class="product-description">A smart solution for business owners to manage and automate their business from anywhere.</p>
+                        </li>
+                    </ul>
+                </div>
 
                 <div class="social-links">
-                    <a href="#" class="social-link facebook">fb</a>
-                    <a href="#" class="social-link twitter">tw</a>
-                    <a href="#" class="social-link instagram">in</a>
-                    <a href="https://www.linkedin.com/in/ahmmedsabbirbd/" target="_blank" class="social-link linkedin">li</a>
-                </div>
-
-                <div class="cta-box">
-                    <p class="description">
-                        Check out some my Think 
-                        <!-- <a href="AlShariah.co" class="link">AlShariah</a> -->
-                    </p>
+                    <a href="#" class="social-link facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/ahmmedsabbirbd/" target="_blank" class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
