@@ -16,73 +16,83 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: rgb(249, 250, 251);
             color: #333;
-            line-height: 1.6;
+            line-height: 1.3;
+            font-size: 14px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
         }
 
         .container {
-            max-width: 1200px;
+            width: 100%;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 3rem 1rem;
+            padding: 1rem;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            align-items: center;
+            grid-template-columns: 250px 1fr;
+            gap: 1.25rem;
+            align-items: start;
         }
 
-        @media (min-width: 768px) {
+        @media (max-width: 768px) {
             .grid {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 1fr;
+            }
+            .image-container {
+                max-width: 250px;
+                margin: 0 auto;
             }
         }
 
         .image-container {
             border-radius: 0.5rem;
             overflow: hidden;
-            height: 600px;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.1);
         }
 
         .profile-image {
             width: 100%;
-            height: 100%;
+            height: 250px;
             object-fit: cover;
         }
 
         .content {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 0.75rem;
         }
 
         .greeting {
-            font-size: 1.25rem;
+            font-size: 0.9rem;
             color: #4B5563;
         }
 
         .name {
-            font-size: 2.25rem;
+            font-size: 1.5rem;
             font-weight: bold;
             color: #2B4595;
-            margin-top: 0.5rem;
+            margin-top: 0.25rem;
         }
 
         .description {
-            font-size: 1.125rem;
+            font-size: 0.85rem;
             color: #4B5563;
+            margin-bottom: 0.25rem;
         }
 
         .social-links {
             display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
+            gap: 0.5rem;
+            margin: 0.5rem 0;
+            justify-content: center;
         }
 
         .social-link {
-            width: 45px;
-            height: 45px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -90,6 +100,7 @@
             color: white;
             text-decoration: none;
             transition: opacity 0.2s;
+            font-size: 0.8rem;
         }
 
         .social-link:hover {
@@ -102,31 +113,36 @@
         .linkedin { background-color: #0A66C2; }
 
         .products-section {
-            margin-top: 2rem;
+            margin-top: 0.5rem;
         }
 
         .section-title {
-            font-size: 1.5rem;
+            font-size: 1rem;
             color: #2B4595;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
         }
 
         .product-list {
             list-style: none;
+            display: grid;
+            gap: 0.5rem;
         }
 
         .product-item {
-            margin-bottom: 1rem;
-            padding: 1rem;
+            padding: 0.5rem;
             background-color: white;
             border-radius: 0.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1);
         }
 
         .product-title {
             color: #2B4595;
             font-weight: 600;
             text-decoration: none;
+            font-size: 0.85rem;
         }
 
         .product-title:hover {
@@ -134,9 +150,27 @@
         }
 
         .product-description {
-            margin-top: 0.5rem;
-            font-size: 0.95rem;
+            margin-top: 0.25rem;
+            font-size: 0.8rem;
             color: #4B5563;
+        }
+
+        .themeforest-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.25rem;
+        }
+
+        .themeforest-links a {
+            font-size: 0.8rem;
+            background: #f3f4f6;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+        }
+
+        .emoji {
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -145,11 +179,17 @@
         <div class="grid">
             <div class="image-container">
                 <img src="./ahmmedsabbirbd.jpg" alt="Profile" class="profile-image">
+                <div class="social-links">
+                    <a href="#" class="social-link facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/ahmmedsabbirbd/" target="_blank" class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
+                </div>
             </div>
             
             <div class="content">
                 <div>
-                    <h2 class="greeting">Hi there 👋</h2>
+                    <h2 class="greeting">Hi there <span class="emoji">👋</span></h2>
                     <h1 class="name">I'm Sabbir</h1>
                 </div>
 
@@ -162,24 +202,24 @@
                 </p>
 
                 <div class="products-section">
-                    <h3 class="section-title">🚀 Contributed Products</h3>
+                    <h3 class="section-title"><span class="emoji">🚀</span> Contributed Products</h3>
                     <ul class="product-list">
                         <li class="product-item">
-                            <a href="https://wordpress.org/plugins/stock-notifier-for-woocommerce" class="product-title">🌓 Stock Notifier for WooCommerce</a>
+                            <a href="https://wordpress.org/plugins/stock-notifier-for-woocommerce" class="product-title"><span class="emoji">🌓</span> Stock Notifier for WooCommerce</a>
                             <p class="product-description">Back in Stock Notifier for WooCommerce with easy in-stock notifications and multi-vendor support.</p>
                         </li>
                         <li class="product-item">
-                            <span class="product-title">Themeforest Contributions:</span>
-                            <p class="product-description">
-                                <a href="https://themeforest.net/item/consulter-business-consulting-html-template/41326996" class="product-title">Consulter</a>,
-                                <a href="https://themeforest.net/item/xlab-business-consulting-html5-template/50177459" class="product-title">Xlab</a>,
-                                <a href="https://themeforest.net/item/artima-modern-architecture-interior-html5-template/54285142" class="product-title">Artima</a>,
-                                <a href="https://themeforest.net/item/ribuild-construction-company-html5-template/54135702" class="product-title">Ribuild</a>,
-                                <a href="https://themeforest.net/item/delish-restaurant-cafe-html5-template/52939405" class="product-title">Delish</a>,
-                                <a href="https://themeforest.net/item/zimis-data-science-analytics-html5-template/53536590" class="product-title">Zimis</a>,
-                                <a href="https://themeforest.net/item/medilix-healthcare-medical-bootstrap-html5-template/52371912" class="product-title">Medilix</a>,
+                            <span class="product-title">Themeforest Contributions</span>
+                            <div class="themeforest-links">
+                                <a href="https://themeforest.net/item/consulter-business-consulting-html-template/41326996" class="product-title">Consulter</a>
+                                <a href="https://themeforest.net/item/xlab-business-consulting-html5-template/50177459" class="product-title">Xlab</a>
+                                <a href="https://themeforest.net/item/artima-modern-architecture-interior-html5-template/54285142" class="product-title">Artima</a>
+                                <a href="https://themeforest.net/item/ribuild-construction-company-html5-template/54135702" class="product-title">Ribuild</a>
+                                <a href="https://themeforest.net/item/delish-restaurant-cafe-html5-template/52939405" class="product-title">Delish</a>
+                                <a href="https://themeforest.net/item/zimis-data-science-analytics-html5-template/53536590" class="product-title">Zimis</a>
+                                <a href="https://themeforest.net/item/medilix-healthcare-medical-bootstrap-html5-template/52371912" class="product-title">Medilix</a>
                                 <a href="https://themeforest.net/item/weta-saas-landing-html5-template/51371905" class="product-title">WETA</a>
-                            </p>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -188,17 +228,10 @@
                     <h3 class="section-title">My Products</h3>
                     <ul class="product-list">
                         <li class="product-item">
-                            <a href="#" class="product-title">🌓 BizAutomateX</a>
+                            <a href="#" class="product-title"><span class="emoji">🌓</span> BizAutomateX</a>
                             <p class="product-description">A smart solution for business owners to manage and automate their business from anywhere.</p>
                         </li>
                     </ul>
-                </div>
-
-                <div class="social-links">
-                    <a href="#" class="social-link facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-link twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-link instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/ahmmedsabbirbd/" target="_blank" class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
