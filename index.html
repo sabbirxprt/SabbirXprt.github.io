@@ -224,6 +224,76 @@
         .instagram { background-color: #E4405F; }
         .linkedin { background-color: #0A66C2; }
 
+        .contact-email {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0.5rem 0;
+            justify-content: center;
+            color: #2B4595;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .contact-email:hover {
+            color: #1e40af;
+        }
+
+        .contact-email::after {
+            content: "Click to copy";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #2B4595;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            white-space: nowrap;
+            margin-bottom: 5px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s, visibility 0.2s;
+        }
+
+        .contact-email:hover::after {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .contact-email::before {
+            content: "";
+            position: absolute;
+            bottom: calc(100% - 5px);
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 5px;
+            border-style: solid;
+            border-color: #2B4595 transparent transparent transparent;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s, visibility 0.2s;
+        }
+
+        .contact-email:hover::before {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .contact-email.copied::after {
+            content: "Copied!";
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .contact-email i {
+            font-size: 1rem;
+        }
+
         .products-section {
             margin-top: 0.5rem;
         }
@@ -329,6 +399,19 @@
             font-size: 0.9rem;
         }
     </style>
+    <script>
+        function copyEmail() {
+            const email = 'ahmmedsabbirbd@gmail.com';
+            const emailLink = document.querySelector('.contact-email');
+            
+            navigator.clipboard.writeText(email).then(() => {
+                emailLink.classList.add('copied');
+                setTimeout(() => {
+                    emailLink.classList.remove('copied');
+                }, 2500);
+            });
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -341,6 +424,10 @@
                     <a href="https://www.instagram.com/ahmmedsabbirbd" class="social-link instagram"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.linkedin.com/in/ahmmedsabbirbd/" target="_blank" class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
                 </div>
+                <a href="mailto:ahmmedsabbirbd@gmail.com" class="contact-email" onclick="copyEmail(); return false;">
+                    <i class="fas fa-envelope"></i>
+                    ahmmedsabbirbd@gmail.com
+                </a>
             </div>
             
             <div class="content">
