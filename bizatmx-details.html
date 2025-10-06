@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BizAtmX - Intelligent Business Automation Platform | Sabbir Ahmmed</title>
+    <meta name="description" content="BizAtmX: Comprehensive business automation platform that streamlines operations, reduces costs, and scales business processes through intelligent workflow automation.">
+    <meta name="keywords" content="BizAtmX, business automation, workflow management, process optimization, business intelligence, SaaS platform">
+    <link rel="canonical" href="https://sabbirxprt.github.io/bizatmx-details.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #2B4595;
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: #1e40af;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 1rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(107, 114, 128, 0.2);
+            color: #6B7280;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #6B7280;
+            border-radius: 50%;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2B4595;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .problem-list, .solution-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .problem-list li, .solution-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .problem-list li:last-child, .solution-list li:last-child {
+            border-bottom: none;
+        }
+
+        .problem-icon {
+            color: #ef4444;
+            font-size: 1.2rem;
+            margin-top: 0.1rem;
+        }
+
+        .solution-icon {
+            color: #F59E0B;
+            font-size: 1.2rem;
+            margin-top: 0.1rem;
+        }
+
+        .tech-stack {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .tech-item {
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        .tech-name {
+            font-weight: 600;
+            color: #2B4595;
+            margin-bottom: 0.25rem;
+        }
+
+        .tech-purpose {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .business-impact {
+            background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .impact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            text-align: center;
+        }
+
+        .impact-number {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .impact-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .modules-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .module-item {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .module-icon {
+            color: #F59E0B;
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .module-title {
+            font-weight: 600;
+            color: #2B4595;
+            margin-bottom: 0.5rem;
+        }
+
+        .module-description {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 0.75rem;
+        }
+
+        .module-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .module-features li {
+            font-size: 0.85rem;
+            color: #64748b;
+            padding: 0.25rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .module-features li::before {
+            content: "✓";
+            color: #10B981;
+            font-weight: bold;
+        }
+
+        .cta-section {
+            text-align: center;
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #F59E0B;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            background: #D97706;
+        }
+
+        .coming-soon {
+            background: #fef3c7;
+            color: #92400e;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            margin-left: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            Back to Portfolio
+        </a>
+
+        <div class="hero-section">
+            <h1 class="hero-title">BizAtmX</h1>
+            <p class="hero-subtitle">
+                Comprehensive business automation platform that transforms manual processes into intelligent workflows, reducing operational costs by 60% while scaling business operations seamlessly.
+            </p>
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                In Development
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <div class="card">
+                <h2 class="card-title">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Business Problems Solved
+                </h2>
+                <ul class="problem-list">
+                    <li>
+                        <i class="fas fa-times-circle problem-icon"></i>
+                        <div>
+                            <strong>Manual Process Inefficiency:</strong> Businesses waste 40% of employee time on repetitive tasks that could be automated, costing millions annually.
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-times-circle problem-icon"></i>
+                        <div>
+                            <strong>Data Silos & Integration Issues:</strong> Critical business data trapped in disconnected systems, leading to poor decision-making and operational delays.
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-times-circle problem-icon"></i>
+                        <div>
+                            <strong>Scalability Bottlenecks:</strong> Manual processes don't scale with business growth, creating operational bottlenecks and increased costs.
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-times-circle problem-icon"></i>
+                        <div>
+                            <strong>Compliance & Error Risks:</strong> Human errors in critical processes lead to compliance violations and financial losses.
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-times-circle problem-icon"></i>
+                        <div>
+                            <strong>Resource Allocation Inefficiency:</strong> Poor visibility into resource utilization leads to overstaffing in some areas and understaffing in others.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">
+                    <i class="fas fa-lightbulb"></i>
+                    Technical Solutions Implemented
+                </h2>
+                <ul class="solution-list">
+                    <li>
+                        <i class="fas fa-check-circle solution-icon"></i>
+                        <div>
+                            <strong>Intelligent Workflow Automation:</strong> AI-powered process automation that learns from business patterns and optimizes workflows automatically.
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle solution-icon"></i>
+                        <div>
+                            <strong>Unified Data Integration:</strong> Seamless integration with 200+ business applications through APIs and custom connectors.
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle solution-icon"></i>
+                        <div>
+                            <strong>Predictive Analytics Engine:</strong> Machine learning models that predict business trends and optimize resource allocation.
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle solution-icon"></i>
+                        <div>
+                            <strong>Smart Compliance Monitoring:</strong> Automated compliance checking with real-time alerts and corrective action suggestions.
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle solution-icon"></i>
+                        <div>
+                            <strong>Dynamic Resource Management:</strong> AI-driven resource allocation that adapts to business demands in real-time.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="modules-section">
+            <h2 class="card-title">
+                <i class="fas fa-cogs"></i>
+                Core Business Modules
+            </h2>
+            <p style="margin-bottom: 1rem; color: #64748b;">
+                Comprehensive suite of business automation tools designed to address every aspect of modern business operations.
+            </p>
+            <div class="modules-grid">
+                <div class="module-item">
+                    <div class="module-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="module-title">Financial Automation</div>
+                    <div class="module-description">
+                        Automated invoicing, expense tracking, and financial reporting with real-time analytics.
+                    </div>
+                    <ul class="module-features">
+                        <li>Automated invoice generation</li>
+                        <li>Expense categorization</li>
+                        <li>Financial forecasting</li>
+                        <li>Tax compliance automation</li>
+                    </ul>
+                </div>
+                <div class="module-item">
+                    <div class="module-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="module-title">HR Management</div>
+                    <div class="module-description">
+                        Streamlined human resources processes from recruitment to performance management.
+                    </div>
+                    <ul class="module-features">
+                        <li>Automated recruitment workflows</li>
+                        <li>Employee onboarding</li>
+                        <li>Performance tracking</li>
+                        <li>Payroll automation</li>
+                    </ul>
+                </div>
+                <div class="module-item">
+                    <div class="module-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="module-title">Sales & CRM</div>
+                    <div class="module-description">
+                        Intelligent customer relationship management with automated sales processes.
+                    </div>
+                    <ul class="module-features">
+                        <li>Lead scoring automation</li>
+                        <li>Sales pipeline management</li>
+                        <li>Customer communication</li>
+                        <li>Revenue forecasting</li>
+                    </ul>
+                </div>
+                <div class="module-item">
+                    <div class="module-icon">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <div class="module-title">Inventory Management</div>
+                    <div class="module-description">
+                        Smart inventory tracking with predictive restocking and demand forecasting.
+                    </div>
+                    <ul class="module-features">
+                        <li>Automated stock monitoring</li>
+                        <li>Predictive restocking</li>
+                        <li>Supplier management</li>
+                        <li>Quality control tracking</li>
+                    </ul>
+                </div>
+                <div class="module-item">
+                    <div class="module-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="module-title">Project Management</div>
+                    <div class="module-description">
+                        Advanced project tracking with resource optimization and deadline management.
+                    </div>
+                    <ul class="module-features">
+                        <li>Task automation</li>
+                        <li>Resource allocation</li>
+                        <li>Progress tracking</li>
+                        <li>Risk assessment</li>
+                    </ul>
+                </div>
+                <div class="module-item">
+                    <div class="module-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="module-title">Compliance & Security</div>
+                    <div class="module-description">
+                        Automated compliance monitoring with security protocols and audit trails.
+                    </div>
+                    <ul class="module-features">
+                        <li>Regulatory compliance</li>
+                        <li>Security monitoring</li>
+                        <li>Audit trail generation</li>
+                        <li>Risk assessment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    
+
+        <div class="business-impact">
+            <h2 class="card-title" style="color: white;">
+                <i class="fas fa-chart-line"></i>
+                Expected Business Impact
+            </h2>
+            <p style="opacity: 0.9; margin-bottom: 1rem;">
+                Projected ROI and efficiency gains based on industry benchmarks and similar automation platform implementations.
+            </p>
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <div class="impact-number">60%</div>
+                    <div class="impact-label">Reduction in Operational Costs</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-number">300%</div>
+                    <div class="impact-label">ROI Within 12 Months</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-number">80%</div>
+                    <div class="impact-label">Faster Process Execution</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-number">95%</div>
+                    <div class="impact-label">Reduction in Human Errors</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2 style="color: #2B4595; margin-bottom: 1rem;">Transform Your Business Operations</h2>
+            <p style="color: #64748b; margin-bottom: 1rem;">
+                Ready to automate your business processes and scale efficiently? Join our beta program for early access to BizAtmX.
+            </p>
+            <a href="mailto:sabbirxprt@gmail.com?subject=BizAtmX Beta Access Interest" class="cta-button">
+                <i class="fas fa-envelope"></i>
+                Request Beta Access
+            </a>
+            <span class="coming-soon">Expected Launch: Q3 2025</span>
+        </div>
+    </div>
+</body>
+</html>

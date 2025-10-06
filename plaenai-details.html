@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlaenAI - Advanced Mind Mapping & Project Management Platform | Sabbir Ahmmed</title>
+    <meta name="description" content="PlaenAI: Revolutionary mind mapping platform combining AI-powered organization with visual project management for enhanced productivity and business efficiency.">
+    <meta name="keywords" content="PlaenAI, mind mapping, project management, AI organization, productivity, business planning">
+    <link rel="canonical" href="https://sabbirxprt.github.io/plaenai-details.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #2B4595;
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: #1e40af;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 1rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(107, 114, 128, 0.2);
+            color: #6B7280;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #6B7280;
+            border-radius: 50%;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2B4595;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .problem-list, .solution-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .problem-list li, .solution-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .problem-list li:last-child, .solution-list li:last-child {
+            border-bottom: none;
+        }
+
+        .problem-icon {
+            color: #ef4444;
+            font-size: 1.2rem;
+            margin-top: 0.1rem;
+        }
+
+        .solution-icon {
+            color: #8B5CF6;
+            font-size: 1.2rem;
+            margin-top: 0.1rem;
+        }
+
+        .tech-stack {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .tech-item {
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        .tech-name {
+            font-weight: 600;
+            color: #2B4595;
+            margin-bottom: 0.25rem;
+        }
+
+        .tech-purpose {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .business-impact {
+            background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .impact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            text-align: center;
+        }
+
+        .impact-number {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .impact-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .features-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .feature-item {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .feature-icon {
+            color: #8B5CF6;
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-title {
+            font-weight: 600;
+            color: #2B4595;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-description {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .cta-section {
+            text-align: center;
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #8B5CF6;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            background: #7C3AED;
+        }
+
+        .coming-soon {
+            background: #fef3c7;
+            color: #92400e;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            margin-left: 1rem;
+        }
+
+        .video-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 */
+            border-radius: 0.75rem;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            Back to Portfolio
+        </a>
+
+        <div class="hero-section">
+            <h1 class="hero-title">PlaenAI</h1>
+            <p class="hero-subtitle">
+                Next-generation mind mapping platform that combines AI-powered organization with visual project management, transforming how businesses plan, execute, and scale their operations.
+            </p>
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                In Development
+            </div>
+        </div>
+
+        <div class="video-section">
+            <h2 class="card-title">
+                <i class="fas fa-play-circle"></i>
+                Product Demo Video
+            </h2>
+            <div class="video-wrapper" style="margin-top: 1rem;">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0" title="PlaenAI Product Demo"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <div class="card">
+                <h2 class="card-title">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Business Problems Solved
+                </h2>
+                <ul class="problem-list">
+                    <li>
+                        <i class="fas fa-times-circle problem-icon"></i>
+                        <div>
+                            <strong>Information Overload:</strong> Teams struggle with scattered data across multiple tools, leading to 40% productivity loss and decision paralysis.
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-times-circle problem-icon"></i>
+                        <div>
+                            <strong>Poor Project Visualization:</strong> Traditional project management tools lack visual representation, making complex projects difficult to understand and track.
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-times-circle problem-icon"></i>
+                        <div>
+                            <strong>Collaboration Inefficiency:</strong> Remote teams face communication gaps and misaligned priorities due to fragmented information sharing.
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-times-circle problem-icon"></i>
+                        <div>
+                            <strong>Strategic Planning Complexity:</strong> Business leaders struggle to visualize and communicate complex strategies to stakeholders effectively.
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-times-circle problem-icon"></i>
+                        <div>
+                            <strong>Knowledge Management Gaps:</strong> Critical business knowledge gets lost in silos, affecting decision-making and organizational learning.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">
+                    <i class="fas fa-lightbulb"></i>
+                    Technical Solutions Implemented
+                </h2>
+                <ul class="solution-list">
+                    <li>
+                        <i class="fas fa-check-circle solution-icon"></i>
+                        <div>
+                            <strong>AI-Powered Organization:</strong> Machine learning algorithms automatically categorize and connect related information for optimal workflow.
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle solution-icon"></i>
+                        <div>
+                            <strong>Interactive Mind Mapping:</strong> Real-time collaborative mind maps with drag-and-drop functionality and infinite canvas capabilities.
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle solution-icon"></i>
+                        <div>
+                            <strong>Smart Project Integration:</strong> Seamless integration with existing project management tools and business applications.
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle solution-icon"></i>
+                        <div>
+                            <strong>Advanced Search & Discovery:</strong> Semantic search across all mapped content with intelligent suggestions and auto-completion.
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle solution-icon"></i>
+                        <div>
+                            <strong>Real-time Collaboration:</strong> Multi-user editing with conflict resolution and version control for seamless team coordination.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="features-section">
+            <h2 class="card-title">
+                <i class="fas fa-star"></i>
+                Key Features & Capabilities
+            </h2>
+            <p style="margin-bottom: 1rem; color: #64748b;">
+                Advanced features designed to address complex business challenges and enhance organizational productivity.
+            </p>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="feature-title">AI-Powered Insights</div>
+                    <div class="feature-description">
+                        Intelligent analysis of mind maps to identify patterns, suggest connections, and recommend optimal project structures.
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="feature-title">Team Collaboration</div>
+                    <div class="feature-description">
+                        Real-time multi-user editing with role-based permissions, comments, and activity tracking for seamless teamwork.
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <div class="feature-title">Integration Hub</div>
+                    <div class="feature-description">
+                        Connect with Slack, Trello, Asana, Google Workspace, and other business tools for unified workflow management.
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="feature-title">Analytics Dashboard</div>
+                    <div class="feature-description">
+                        Comprehensive insights into team productivity, project progress, and knowledge sharing patterns.
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="feature-title">Cross-Platform Access</div>
+                    <div class="feature-description">
+                        Native apps for desktop, web, and mobile with offline capabilities and automatic synchronization.
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="feature-title">Enterprise Security</div>
+                    <div class="feature-description">
+                        End-to-end encryption, SSO integration, and compliance with GDPR, SOC 2, and other enterprise security standards.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="business-impact">
+            <h2 class="card-title" style="color: white;">
+                <i class="fas fa-chart-line"></i>
+                Expected Business Impact
+            </h2>
+            <p style="opacity: 0.9; margin-bottom: 1rem;">
+                Projected results based on market research and similar platform implementations in enterprise environments.
+            </p>
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <div class="impact-number">40%</div>
+                    <div class="impact-label">Increase in Team Productivity</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-number">60%</div>
+                    <div class="impact-label">Reduction in Meeting Time</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-number">75%</div>
+                    <div class="impact-label">Faster Project Planning</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-number">50%</div>
+                    <div class="impact-label">Improvement in Knowledge Sharing</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2 style="color: #2B4595; margin-bottom: 1rem;">PlaenAI Coming Soon</h2>
+            <p style="color: #64748b; margin-bottom: 1rem;">
+                Be among the first to experience the future of mind mapping and project management. Join our early access program.
+            </p>
+            <a href="mailto:sabbirxprt@gmail.com?subject=PlaenAI Early Access Interest" class="cta-button">
+                <i class="fas fa-envelope"></i>
+                Request Early Access
+            </a>
+            <span class="coming-soon">Expected Launch: Q2 2025</span>
+        </div>
+    </div>
+</body>
+</html>

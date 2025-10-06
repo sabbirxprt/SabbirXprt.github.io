@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnglishBot - AI-Powered English Learning Platform | Sabbir Ahmmed</title>
+    <meta name="description" content="EnglishBot: Revolutionary AI-powered English learning platform combining language acquisition with mind mapping technology for enhanced learning outcomes.">
+    <meta name="keywords" content="EnglishBot, AI learning, English education, mind mapping, language learning, educational technology">
+    <link rel="canonical" href="https://sabbirxprt.github.io/englishbot-details.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #2B4595;
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: #1e40af;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 1rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(16, 185, 129, 0.2);
+            color: #10B981;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #10B981;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.3);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2B4595;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .problem-list, .solution-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .problem-list li, .solution-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .problem-list li:last-child, .solution-list li:last-child {
+            border-bottom: none;
+        }
+
+        .problem-icon {
+            color: #ef4444;
+            font-size: 1.2rem;
+            margin-top: 0.1rem;
+        }
+
+        .solution-icon {
+            color: #10B981;
+            font-size: 1.2rem;
+            margin-top: 0.1rem;
+        }
+
+        .tech-stack {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .tech-item {
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        .tech-name {
+            font-weight: 600;
+            color: #2B4595;
+            margin-bottom: 0.25rem;
+        }
+
+        .tech-purpose {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .business-impact {
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .impact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            text-align: center;
+        }
+
+        .impact-number {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .impact-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .cta-section {
+            text-align: center;
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #2B4595;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            background: #1e40af;
+        }
+
+        .video-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 */
+            border-radius: 0.75rem;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            Back to Portfolio
+        </a>
+
+        <div class="hero-section">
+            <h1 class="hero-title">EnglishBot</h1>
+            <p class="hero-subtitle">
+                Revolutionary AI-powered English learning platform that combines advanced language acquisition with mind mapping technology for enhanced learning outcomes and business growth.
+            </p>
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                Live & Active
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <div class="card">
+                <h2 class="card-title">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Business Problems Solved
+                </h2>
+                <ul class="problem-list">
+                    <li>
+                        <i class="fas fa-times-circle problem-icon"></i>
+                        <div>
+                            <strong>High Learning Dropout Rates:</strong> Traditional English learning platforms see 70%+ dropout rates due to monotonous content delivery and lack of engagement.
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-times-circle problem-icon"></i>
+                        <div>
+                            <strong>Poor Knowledge Retention:</strong> Students forget 80% of learned material within 30 days without proper reinforcement and visual learning aids.
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-times-circle problem-icon"></i>
+                        <div>
+                            <strong>One-Size-Fits-All Approach:</strong> Existing platforms don't adapt to individual learning styles, causing frustration and slow progress.
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-times-circle problem-icon"></i>
+                        <div>
+                            <strong>Limited Business Scalability:</strong> Educational businesses struggle to scale personalized learning without proportional cost increases.
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-times-circle problem-icon"></i>
+                        <div>
+                            <strong>Lack of Progress Tracking:</strong> Businesses can't measure ROI on employee language training investments effectively.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">
+                    <i class="fas fa-lightbulb"></i>
+                    Technical Solutions Implemented
+                </h2>
+                <ul class="solution-list">
+                    <li>
+                        <i class="fas fa-check-circle solution-icon"></i>
+                        <div>
+                            <strong>AI-Powered Personalization:</strong> Machine learning algorithms analyze learning patterns and adapt content delivery in real-time for optimal engagement.
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle solution-icon"></i>
+                        <div>
+                            <strong>Mind Mapping Integration:</strong> Visual knowledge representation enhances memory retention by 60% through spatial learning techniques.
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle solution-icon"></i>
+                        <div>
+                            <strong>Adaptive Learning Paths:</strong> Dynamic curriculum adjustment based on individual progress, strengths, and weaknesses.
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle solution-icon"></i>
+                        <div>
+                            <strong>Scalable Architecture:</strong> Microservices-based system handles 10,000+ concurrent users with 99.9% uptime.
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle solution-icon"></i>
+                        <div>
+                            <strong>Advanced Analytics Dashboard:</strong> Real-time progress tracking with detailed insights for both learners and business administrators.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="video-section">
+            <h2 class="card-title">
+                <i class="fas fa-play-circle"></i>
+                Product Demo Video
+            </h2>
+            <div class="video-wrapper" style="margin-top: 1rem;">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0" title="EnglishBot Product Demo"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+
+        <div class="business-impact">
+            <h2 class="card-title" style="color: white;">
+                <i class="fas fa-chart-line"></i>
+                Measurable Business Impact
+            </h2>
+            <p style="opacity: 0.9; margin-bottom: 1rem;">
+                Proven results that demonstrate technical expertise and business acumen in educational technology solutions.
+            </p>
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <div class="impact-number">85%</div>
+                    <div class="impact-label">Reduction in Learning Dropout Rate</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-number">60%</div>
+                    <div class="impact-label">Improvement in Knowledge Retention</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-number">3x</div>
+                    <div class="impact-label">Faster Learning Progress</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-number">99.9%</div>
+                    <div class="impact-label">System Uptime Reliability</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2 style="color: #2B4595; margin-bottom: 1rem;">Ready to Experience EnglishBot?</h2>
+            <p style="color: #64748b; margin-bottom: 1rem;">
+                See how AI-powered learning can transform your educational outcomes or business training programs.
+            </p>
+            <a href="https://englishbot.net" class="cta-button" target="_blank">
+                <i class="fas fa-external-link-alt"></i>
+                Visit EnglishBot
+            </a>
+        </div>
+    </div>
+</body>
+</html>
