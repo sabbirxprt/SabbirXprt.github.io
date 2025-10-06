@@ -428,6 +428,25 @@
             font-size: 0.9rem;
         }
 
+        .status-indicator {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-left: 6px;
+            margin-top: -2px;
+            vertical-align: middle;
+        }
+
+        .status-active {
+            background-color: #10B981;
+            box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+        }
+
+        .status-inactive {
+            background-color: #6B7280;
+        }
+
         .timeline {
             position: relative;
             padding: 10px 0;
@@ -684,7 +703,31 @@
                     <h3 class="section-title">My Products</h3>
                     <ul class="product-list">
                         <li class="product-item">
-                            <a href="#" class="product-title"><span class="emoji">🌓</span> BizAtmX</a>
+                            <a href="https://englishbot.net" class="product-title">
+                                EnglishBot <span class="status-indicator status-active"></span>
+                            </a>
+                            <p class="product-description">An AI-powered English learning platform that combines language learning tools with mind mapping capabilities for students, professionals, and language learners.</p>
+                            <div class="company-info">
+                                <span class="emoji">🏢</span>
+                                <span>EnglishBot</span>
+                                <span class="time-period">Feb 2024 - Present</span>
+                            </div>
+                        </li>
+                        <li class="product-item">
+                            <a href="#" class="product-title">
+                                PlaenAI <span class="status-indicator status-inactive"></span>
+                            </a>
+                            <p class="product-description">A clean, minimal, and fast mind mapping tool to help users organize thoughts, ideas, plans, and projects visually.</p>
+                            <div class="company-info">
+                                <span class="emoji">🏢</span>
+                                <span>PlaenAI</span>
+                                <span class="time-period">Feb 2025 - Present</span>
+                            </div>
+                        </li>
+                        <li class="product-item">
+                            <a href="#" class="product-title">
+                                BizAtmX <span class="status-indicator status-inactive"></span>
+                            </a>
                             <p class="product-description">A smart solution for business owners to manage and automate their business from anywhere.</p>
                             <div class="company-info">
                                 <span class="emoji">🏢</span>
