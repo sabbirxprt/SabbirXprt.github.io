@@ -240,18 +240,30 @@
         .instagram { background-color: #E4405F; }
         .linkedin { background-color: #0A66C2; }
 
+     
+
         .contact-email {
-            display: flex;
+            display: inline-flex;
+            margin-left: auto;
+            margin-right: auto;
             align-items: center;
             gap: 0.5rem;
-            margin: 0.5rem 0;
             justify-content: center;
             color: #2B4595;
             text-decoration: none;
             font-size: 0.9rem;
             transition: color 0.2s;
             position: relative;
-            cursor: pointer;
+            cursor: pointer; 
+        }
+
+        
+        .email-container  { 
+            margin-top: 5px;
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            justify-content: center;
         }
 
         .contact-email:hover {
@@ -518,9 +530,8 @@
         }
     </style>
     <script>
-        function copyEmail() {
-            const email = 'sabbirxprt@gmail.com';
-            const emailLink = document.querySelector('.contact-email');
+        function copyEmail(email) {
+            const emailLink = event.target.closest('.contact-email');
             
             navigator.clipboard.writeText(email).then(() => {
                 emailLink.classList.add('copied');
@@ -535,21 +546,23 @@
     <div class="container">
         <div class="grid">
             <div class="image-container">
-                <img src="./Sabbir-Ahmmed_Software-Engineer-Expert-in-SaaS-Based-Business-Applications.jpg" alt="Sabbir Ahmmed - Software Engineer | Expert in SaaS-Based Business Applications" class="profile-image">
+                <img src="SabbirXprt.jpg" alt="Sabbir Ahmmed - Software Engineer | Expert in SaaS-Based Business Applications" class="profile-image">
                 <div class="social-links">
                     <a href="https://facebook.com/sabbirxprt/" class="social-link facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://x.com/sabbirxprt" class="social-link twitter"><i class="fab fa-twitter"></i></a>
                     <a href="https://www.instagram.com/sabbirxprt" class="social-link instagram"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.linkedin.com/in/sabbirxprt/" target="_blank" class="social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
                 </div>
-                <a href="mailto:sabbirxprt@gmail.com" class="contact-email" onclick="copyEmail(); return false;">
-                    <i class="fas fa-envelope"></i>
-                    sabbirxprt@gmail.com
-                </a>
-                <a href="mailto:ahmmedsabbirbd@gmail.com" class="contact-email" onclick="copyEmail(); return false;">
-                    <i class="fas fa-envelope"></i>
-                    ahmmedsabbirbd@gmail.com (secondary)
-                </a>
+                <div class="email-container">
+                    <a href="mailto:sabbirxprt@gmail.com" class="contact-email primary" onclick="copyEmail('sabbirxprt@gmail.com'); return false;">
+                        <i class="fas fa-envelope"></i>
+                        sabbirxprt@gmail.com
+                    </a>
+                    <a href="mailto:ahmmedsabbirbd@gmail.com" class="contact-email secondary" onclick="copyEmail('ahmmedsabbirbd@gmail.com'); return false;">
+                        <i class="fas fa-envelope"></i>
+                        ahmmedsabbirbd@gmail.com
+                    </a>
+                </div>
                 
                 <div class="products-section">
                     <div class="timeline">
@@ -608,7 +621,7 @@
                     <meta itemprop="jobTitle" content="Sabbir Ahmmed - Software Engineer | Expert in SaaS-Based Business Applications">
                     <meta itemprop="description" content="A passionate Software Engineer specializing in PHP, MySQL, JavaScript, Laravel, and WordPress for scalable SaaS solutions.">
                     <meta itemprop="url" content="https://sabbirxprt.github.io">
-                    <meta itemprop="image" content="https://sabbirxprt.github.io/sabbirxprt.jpg">
+                    <meta itemprop="image" content="https://sabbirxprt.github.io/SabbirXprt.jpg">
                     <meta itemprop="email" content="sabbirxprt@gmail.com">
                     <meta itemprop="sameAs" content="https://facebook.com/sabbirxprt/">
                     <meta itemprop="sameAs" content="https://x.com/sabbirxprt">
