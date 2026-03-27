@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness | Research | Sabbir Ahmmed</title>
-    <meta name="description" content="Research and notes on fitness by Sabbir Ahmmed.">
+    <meta name="description" content="Simple fitness guide: skin, supplements, metabolism, exercise, diet, hormones, and daily routine.">
     <meta name="keywords" content="Sabbir Ahmmed, research, fitness">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Sabbir Ahmmed">
@@ -15,14 +15,14 @@
     <link rel="apple-touch-icon" href="../SabbirXprt.jpg">
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Fitness | Research | Sabbir Ahmmed">
-    <meta property="og:description" content="Research and notes on fitness.">
+    <meta property="og:description" content="Simple fitness guide: skin, supplements, metabolism, exercise, diet, hormones, and daily routine.">
     <meta property="og:image" content="https://sabbirxprt.github.io/bio.png">
     <meta property="og:url" content="https://sabbirxprt.github.io/research/fitness.html">
     <meta property="og:type" content="website">
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Fitness | Research | Sabbir Ahmmed">
-    <meta name="twitter:description" content="Research and notes on fitness.">
+    <meta name="twitter:description" content="Simple fitness guide: skin, supplements, metabolism, exercise, diet, hormones, and daily routine.">
     <meta name="twitter:image" content="https://sabbirxprt.github.io/bio.png">
     <meta name="twitter:site" content="@sabbirxprt">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -99,6 +99,11 @@
             border-bottom: 1px solid #e2e8f0;
         }
         article h2:first-of-type { margin-top: 0; }
+        article h3 {
+            font-size: 1.05rem;
+            color: #334155;
+            margin: 1.25rem 0 0.5rem;
+        }
         article p {
             margin-bottom: 1rem;
             color: #475569;
@@ -145,6 +150,25 @@
         .back-to-research:hover {
             text-decoration: underline;
         }
+        .standalone-summary { margin-top: 1.5rem; }
+        .standalone-summary h2 { font-size: 1.25rem; color: #1e293b; margin: 0 0 0.75rem; padding-bottom: 0.25rem; border-bottom: 1px solid #e2e8f0; }
+        .standalone-summary h3 { font-size: 1.05rem; color: #334155; margin: 1.25rem 0 0.5rem; }
+        .standalone-summary h3:first-of-type { margin-top: 0; }
+        .standalone-summary ul { margin: 0.5rem 0 1rem 1.5rem; color: #475569; }
+        .standalone-summary li { margin-bottom: 0.35rem; }
+        .standalone-summary .print-summary-btn {
+            padding: 0.4rem 0.75rem; background: #2B4595; color: white; border: none; border-radius: 0.25rem; cursor: pointer; font-size: 0.9rem;
+        }
+        .standalone-summary .print-summary-btn:hover { background: #23407d; }
+        .eight-steps-highlight {
+            background: #f1f5f9;
+            border-left: 4px solid #2B4595;
+            padding: 1rem 1.25rem;
+            margin: 1rem 0;
+            border-radius: 0 0.25rem 0.25rem 0;
+        }
+        .eight-steps-highlight p { margin-bottom: 0.75rem; color: #334155; }
+        .eight-steps-highlight p:last-child { margin-bottom: 0; }
         @media print {
             body { background: white; padding: 0; }
             .no-print { display: none !important; }
@@ -154,7 +178,7 @@
                 padding: 0;
                 background: transparent;
             }
-            article h2 {
+            article h2, article h3 {
                 page-break-after: avoid;
                 border-bottom-color: #cbd5e1;
             }
@@ -163,6 +187,15 @@
             .results-table th { background: #e2e8f0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
             a[href]::after { content: none; }
             .toc { font-size: 0.85rem; margin-bottom: 1rem; }
+            body.print-standalone-summary .container > nav,
+            body.print-standalone-summary .page-title,
+            body.print-standalone-summary .subtitle,
+            body.print-standalone-summary .toc,
+            body.print-standalone-summary .container > article:first-of-type,
+            body.print-standalone-summary .back-to-research { display: none !important; }
+            body.print-standalone-summary .standalone-summary { display: block !important; margin-top: 0; }
+            body.print-standalone-summary .standalone-summary .print-summary-btn { display: none !important; }
+            body.print-standalone-summary .standalone-summary .no-print { display: none !important; }
         }
     </style>
 </head>
@@ -178,100 +211,479 @@
             </ol>
         </nav>
         <h1 class="page-title">Fitness</h1>
-        <p class="subtitle">Research &amp; case study</p>
+        <p class="subtitle">Research &amp; simple guide</p>
         <nav class="toc" aria-label="Table of contents">
             <strong>Table of contents</strong>
             <ul>
-                <li><a href="#overview">1. Overview</a></li>
-                <li><a href="#participant-profile">2. Participant profile</a></li>
-                <li><a href="#program-design">3. Program design</a></li>
-                <li><a href="#goals">4. Goals</a></li>
-                <li><a href="#results">5. Results (sample)</a></li>
-                <li><a href="#analysis">6. Analysis</a></li>
-                <li><a href="#recommendations">7. Recommendations</a></li>
+                <li><a href="#eight-steps">1. The 8 Steps</a></li>
+                <li><a href="#skin-supplements">2. Skin &amp; Supplements</a></li>
+                <li><a href="#metabolism">3. Metabolism</a></li>
+                <li><a href="#exercise-plan">4. Exercise Plan</a></li>
+                <li><a href="#diet-plan">5. Diet Plan</a></li>
+                <li><a href="#hormone-health">6. Hormone Health</a></li>
+                <li><a href="#daily-routine">7. Simple Daily Routine</a></li>
+                <li><a href="#ignore-consequences">8. If You Ignore Everything</a></li>
+                <li><a href="#about-height">9. About Height</a></li>
+                <li><a href="#quick-reference">10. Quick reference (printable)</a></li>
             </ul>
         </nav>
         <article>
-            <h2>Fitness Case Study: Improving Health Through a Structured Exercise Program</h2>
-            <h2 id="overview">1. Overview</h2>
-            <p>This case study examines how a 12-week structured fitness program can improve physical health, strength, endurance, and mental well-being in adults aged 20–35.</p>
-            <h2 id="participant-profile">2. Participant Profile</h2>
-            <ul>
-                <li><strong>Number of participants:</strong> 10</li>
-                <li><strong>Age range:</strong> 20–35 years</li>
-                <li><strong>Gender:</strong> Mixed (6 males, 4 females)</li>
-                <li><strong>Initial fitness level:</strong> Sedentary to moderately active</li>
-            </ul>
-            <h2 id="program-design">3. Program Design</h2>
-            <ul>
-                <li><strong>Duration:</strong> 12 weeks</li>
-                <li><strong>Frequency:</strong> 4 sessions per week</li>
-                <li><strong>Type of exercise:</strong>
-                    <ul>
-                        <li>Strength training (2× per week)</li>
-                        <li>Cardio (2× per week, 30–45 min each)</li>
-                        <li>Flexibility &amp; stretching (daily, 10–15 min)</li>
-                    </ul>
-                </li>
-                <li><strong>Nutrition:</strong> Balanced diet with high protein, moderate carbs, healthy fats</li>
-                <li><strong>Monitoring:</strong> Weekly weight, body fat %, and endurance tests</li>
-            </ul>
-            <h2 id="goals">4. Goals</h2>
-            <ul>
-                <li>Improve cardiovascular endurance</li>
-                <li>Increase muscle strength</li>
-                <li>Reduce body fat</li>
-                <li>Enhance overall mental health</li>
-            </ul>
-            <h2 id="results">5. Results (Sample)</h2>
+            <p>A simple, evidence-aware guide: food, sleep, and exercise first; supplements only for deficiency.</p>
+            <h2 id="eight-steps">1. The 8 Steps</h2>
+            <div class="eight-steps-highlight">
+                <p><strong>1. Do Hard Things (2:40):</strong> Embrace discomfort and challenge yourself to step outside your comfort zone. This builds self-alignment and helps you overcome false narratives.</p>
+                <p><strong>2. The End is the Beginning (Prioritize Sleep) (4:10):</strong> Your day begins the night before. Make sleep your number one priority by establishing a consistent bedtime routine, including finishing meals 4 hours before bed and avoiding screens.</p>
+                <p><strong>3. Start Your Day with Purpose (6:20):</strong> Wake up at the same time every day, get bright light, and move your body. This creates stability and leverage over your day by shifting from passive to present.</p>
+                <p><strong>4. Futureproof Your Body (Exercise) (physical inactivity is disease) (7:45):</strong> Treat movement as non-negotiable and prioritize it daily for capability and lifelong ability, not just aesthetics. Focus on building strength, mobility, flexibility, and cardiovascular health.</p>
+                <p><strong>5. Treat Food as Medicine (9:05):</strong> Prioritize whole, nutrient-dense foods, and aggressively reduce processed foods, added sugar, artificial additives, alcohol, and smoking. Your food choices impact your physical and mental well-being.</p>
+                <p><strong>6. Kill the Distractions (10:50):</strong> Set boundaries for your attention and limit exposure to &quot;ultra-processed content&quot; like endless feeds, breaking news, and games. Use tools like time caps and app blockers to protect your clarity.</p>
+                <p><strong>7. Remove Isolation (11:59):</strong> Prioritize relationships with friends, family, and loved ones. Engage in real conversations, share meals, and make an effort to connect with others, as humans thrive on connection.</p>
+                <p><strong>8. Stop Watching Motivational Garbage (13:26):</strong> True change comes from self-trust and keeping small promises to yourself, not from fleeting inspiration. Focus on consistent small actions rather than grand declarations.</p>
+            </div>
+            <h2 id="skin-supplements">2. Skin &amp; Supplements</h2>
+            <p class="note">Supplements are helpful only if you have deficiency. Food + sleep + exercise are more important.</p>
+            <h3>Core Supplements</h3>
             <div class="results-table-wrap">
-                <table class="results-table" summary="Sample results: participant weight, body fat, push-ups, 1km run time, mood rating before and after.">
+                <table class="results-table" summary="Core supplements: main benefit and problems when low.">
                     <thead>
                         <tr>
-                            <th>Participant</th>
-                            <th>Weight (kg)</th>
-                            <th>Body Fat %</th>
-                            <th>Push-ups</th>
-                            <th>Running 1 km</th>
-                            <th>Mood (1–10)</th>
+                            <th>Supplement</th>
+                            <th>Main Benefit</th>
+                            <th>If Low (Problem)</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>P1</td>
-                            <td>75 → 72</td>
-                            <td>22 → 18</td>
-                            <td>20 → 35</td>
-                            <td>6:00 → 5:10</td>
-                            <td>6 → 9</td>
+                            <td>Vitamin D3</td>
+                            <td>Strong bones, better mood, supports testosterone</td>
+                            <td>Weakness, low mood, low immunity</td>
                         </tr>
                         <tr>
-                            <td>P2</td>
-                            <td>68 → 66</td>
-                            <td>20 → 17</td>
-                            <td>15 → 28</td>
-                            <td>6:30 → 5:20</td>
-                            <td>5 → 8</td>
+                            <td>Zinc</td>
+                            <td>Helps skin, supports testosterone, immunity</td>
+                            <td>Acne, hair fall, low libido</td>
+                        </tr>
+                        <tr>
+                            <td>Omega-3</td>
+                            <td>Heart health, brain focus, glowing skin</td>
+                            <td>Dry skin, joint pain</td>
+                        </tr>
+                        <tr>
+                            <td>Magnesium</td>
+                            <td>Better sleep, muscle recovery, stress control</td>
+                            <td>Muscle cramps, anxiety</td>
+                        </tr>
+                        <tr>
+                            <td>Vitamin B (B1, B6, B12)</td>
+                            <td>Energy, brain &amp; nerves</td>
+                            <td>Fatigue, weakness</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <p class="note">Note: All participants reported higher energy levels and better sleep quality.</p>
-            <h2 id="analysis">6. Analysis</h2>
+            <h3>Vitamin E &amp; Collagen</h3>
+            <div class="results-table-wrap">
+                <table class="results-table" summary="Vitamin E and collagen: simple truth.">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Simple Truth</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Vitamin E</td>
+                            <td>Usually enough from food</td>
+                        </tr>
+                        <tr>
+                            <td>Collagen</td>
+                            <td>Helpful after 25+ or for skin/joint problems</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>Basic Skin Care (Keep It Simple)</h3>
+            <div class="results-table-wrap">
+                <table class="results-table" summary="Basic skincare: what to do and why.">
+                    <thead>
+                        <tr>
+                            <th>What to Do</th>
+                            <th>Why</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Face wash (2× daily)</td>
+                            <td>Remove oil &amp; dirt</td>
+                        </tr>
+                        <tr>
+                            <td>Moisturizer</td>
+                            <td>Prevent dry skin</td>
+                        </tr>
+                        <tr>
+                            <td>Sunscreen (very important)</td>
+                            <td>Prevent dark spots &amp; early aging</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="note">If you ignore skin care: acne, dark spots, dull face.</p>
+            <h2 id="metabolism">3. Metabolism (Body Engine)</h2>
+            <p>Metabolism = how your body burns calories for energy.</p>
+            <div class="results-table-wrap">
+                <table class="results-table" summary="Important metabolism markers and normal ranges.">
+                    <thead>
+                        <tr>
+                            <th>Important Marker</th>
+                            <th>Normal Range</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Blood Sugar (fasting)</td>
+                            <td>70–99 mg/dL</td>
+                        </tr>
+                        <tr>
+                            <td>TSH</td>
+                            <td>Thyroid control</td>
+                        </tr>
+                        <tr>
+                            <td>BMR</td>
+                            <td>Calories burned at rest</td>
+                        </tr>
+                        <tr>
+                            <td>BMI</td>
+                            <td>Body mass index</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>If metabolism is slow:</p>
             <ul>
-                <li>Structured fitness routines with combined strength and cardio training improve both physical and mental health.</li>
-                <li>Protein-rich nutrition supports muscle recovery and growth.</li>
-                <li>Consistency (4× per week) is critical for measurable progress.</li>
+                <li>Fat gain</li>
+                <li>Low energy</li>
+                <li>Brain fog</li>
+                <li>Poor skin</li>
             </ul>
-            <h2 id="recommendations">7. Recommendations</h2>
+            <h2 id="exercise-plan">4. Exercise Plan</h2>
+            <h3>Strength Training (3–4 days/week)</h3>
+            <p>Push-ups, Squats, Pull-ups, Weights.</p>
+            <div class="results-table-wrap">
+                <table class="results-table" summary="Strength training benefits and consequences if you don't.">
+                    <thead>
+                        <tr>
+                            <th>Benefit</th>
+                            <th>If You Don't</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Build muscle</td>
+                            <td>Weak body</td>
+                        </tr>
+                        <tr>
+                            <td>Increase testosterone</td>
+                            <td>Low hormone</td>
+                        </tr>
+                        <tr>
+                            <td>Boost metabolism</td>
+                            <td>Fat gain</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>Cardio (2–3 days/week)</h3>
+            <p>Walking, Running, Cycling, HIIT.</p>
+            <div class="results-table-wrap">
+                <table class="results-table" summary="Cardio benefits and consequences if you don't.">
+                    <thead>
+                        <tr>
+                            <th>Benefit</th>
+                            <th>If You Don't</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Healthy heart</td>
+                            <td>Low stamina</td>
+                        </tr>
+                        <tr>
+                            <td>Burns fat</td>
+                            <td>Belly fat</td>
+                        </tr>
+                        <tr>
+                            <td>Reduce stress</td>
+                            <td>High cortisol</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>Sleep (7–9 Hours)</h3>
+            <div class="results-table-wrap">
+                <table class="results-table" summary="Sleep benefits and consequences if sleep is poor.">
+                    <thead>
+                        <tr>
+                            <th>Benefit</th>
+                            <th>If Sleep Is Poor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>High testosterone</td>
+                            <td>Low testosterone</td>
+                        </tr>
+                        <tr>
+                            <td>Low stress</td>
+                            <td>High cortisol</td>
+                        </tr>
+                        <tr>
+                            <td>Muscle recovery</td>
+                            <td>Fat gain</td>
+                        </tr>
+                        <tr>
+                            <td>Better skin</td>
+                            <td>Dull skin</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h2 id="diet-plan">5. Diet Plan (Simple &amp; Balanced)</h2>
+            <h3>Eat More</h3>
+            <div class="results-table-wrap">
+                <table class="results-table" summary="Foods to eat more and why.">
+                    <thead>
+                        <tr>
+                            <th>Food</th>
+                            <th>Why</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Eggs</td><td>High protein</td></tr>
+                        <tr><td>Fish</td><td>Omega-3</td></tr>
+                        <tr><td>Milk</td><td>Protein + calcium</td></tr>
+                        <tr><td>Dal</td><td>Plant protein</td></tr>
+                        <tr><td>Vegetables</td><td>Vitamins</td></tr>
+                        <tr><td>Apple / Orange</td><td>Antioxidants</td></tr>
+                        <tr><td>Rice / Ruti (controlled)</td><td>Energy</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>Avoid</h3>
+            <div class="results-table-wrap">
+                <table class="results-table" summary="Foods and habits to avoid and why.">
+                    <thead>
+                        <tr>
+                            <th>Avoid</th>
+                            <th>Why</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Junk food</td><td>Fat gain, acne</td></tr>
+                        <tr><td>Cola</td><td>High sugar</td></tr>
+                        <tr><td>Too much sugar</td><td>Diabetes risk</td></tr>
+                        <tr><td>Too much coffee</td><td>High stress</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 id="protein-regular">Protein for regular (must-have)</h3>
+            <div class="results-table-wrap">
+                <table class="results-table" summary="Regular must-have protein sources and amounts.">
+                    <thead>
+                        <tr>
+                            <th>Source</th>
+                            <th>Serving</th>
+                            <th>Protein</th>
+                        </tr>
+                    </thead>
+                    <tbody
+                        <tr><td>chickpeas</td><td>100g</td><td>24g</td></tr>
+                        <tr><td>Peanut</td><td>100g</td><td>24g</td></tr>
+                        <tr><td>3 Eggs</td><td>—</td><td>10g</td></tr>
+                        <tr><td>Milk</td><td>1 cup</td><td>7g</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <h2 id="hormone-health">6. Hormone Health (Simple)</h2>
+            <h3>Testosterone Boost</h3>
+            <div class="results-table-wrap">
+                <table class="results-table" summary="What to do and what to avoid for testosterone.">
+                    <thead>
+                        <tr>
+                            <th>Do This</th>
+                            <th>Avoid This</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Strength training</td>
+                            <td>Late night sleep</td>
+                        </tr>
+                        <tr>
+                            <td>7–9 hr sleep</td>
+                            <td>Smoking</td>
+                        </tr>
+                        <tr>
+                            <td>Sunlight</td>
+                            <td>Alcohol</td>
+                        </tr>
+                        <tr>
+                            <td>Zinc + Vitamin D</td>
+                            <td>Too much junk food</td>
+                        </tr>
+                        <tr>
+                            <td>Healthy fats</td>
+                            <td>Long screen time</td>
+                        </tr>
+                        <tr>
+                            <td>Push-ups, Squats, Pull-ups, Sprint/HIIT</td>
+                            <td>Boost testosterone</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="note">Normal masturbation does NOT permanently reduce testosterone.</p>
+            <h3>Cortisol (Stress Hormone)</h3>
+            <div class="results-table-wrap">
+                <table class="results-table" summary="How to control cortisol and consequences if high.">
+                    <thead>
+                        <tr>
+                            <th>Control It By</th>
+                            <th>If High</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Early sleep</td>
+                            <td>Belly fat</td>
+                        </tr>
+                        <tr>
+                            <td>Exercise</td>
+                            <td>Anxiety</td>
+                        </tr>
+                        <tr>
+                            <td>Outdoor time</td>
+                            <td>Low testosterone</td>
+                        </tr>
+                        <tr>
+                            <td>Low caffeine</td>
+                            <td>Poor sleep</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3>Prolactin</h3>
+            <p>Usually normal. If high: low libido, fatigue. Do blood test if symptoms.</p>
+            <h2 id="daily-routine">7. Simple Daily Routine</h2>
+            <div class="results-table-wrap">
+                <table class="results-table" summary="Time-based daily routine.">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>What To Do</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Morning</td><td>Sunlight + Exercise</td></tr>
+                        <tr><td>Breakfast</td><td>High protein</td></tr>
+                        <tr><td>Day</td><td>Healthy food + 8–10k steps</td></tr>
+                        <tr><td>Night</td><td>No screen 1 hr before bed</td></tr>
+                        <tr><td>Sleep</td><td>Before 11 PM</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <h2 id="ignore-consequences">8. If You Ignore Everything</h2>
+            <p><strong>Short term:</strong></p>
             <ul>
-                <li>Beginners should start with lower intensity and gradually increase.</li>
-                <li>Use wearable devices to track progress.</li>
-                <li>Include flexibility and mental wellness exercises to avoid injury and burnout.</li>
-                <li>Maintain proper hydration and nutrition throughout the program.</li>
+                <li>Low energy</li>
+                <li>Acne</li>
+                <li>Mood swings</li>
             </ul>
+            <p><strong>Long term:</strong></p>
+            <ul>
+                <li>Obesity</li>
+                <li>Diabetes</li>
+                <li>Heart disease</li>
+                <li>Hormone imbalance</li>
+            </ul>
+            <h2 id="about-height">9. About Height (Important)</h2>
+            <p><strong>If you are under 18–21:</strong></p>
+            <ul>
+                <li>Sleep 8–9 hours</li>
+                <li>Eat high protein</li>
+                <li>Exercise</li>
+                <li>Get sunlight</li>
+            </ul>
+            <p><strong>After age 21:</strong> Height increase is very limited (bones closed). You can improve posture to look taller.</p>
+            <p class="note">No supplement can significantly increase height after growth plates close.</p>
         </article>
+        <section class="standalone-summary" id="quick-reference" style="background: white; padding: 2rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+            <h2>10. Quick reference (printable)</h2>
+            <p class="no-print" style="margin-bottom: 0.75rem;"><button type="button" class="print-summary-btn">Print this summary</button></p>
+            <h3>Skin / Supplements</h3>
+            <ul>
+                <li>Vitamin E → Skin (most important)</li>
+                <li>Collagen</li>
+                <li>Civit 230</li>
+                <li>Nervous B → B1, B6, B12</li>
+                <li>Multivitamin</li>
+                <li>Vitamin D3</li>
+                <li>Zinc</li>
+                <li>Omega-3 (Fish oil)</li>
+                <li>Magnesium → Muscle</li>
+                <li>Nivea soft</li>
+                <li>Face wash</li>
+            </ul>
+            <h3>Fitness Information</h3>
+            <ul>
+                <li>Metabolism → System of the human body</li>
+                <li>Combination of TSH, BMR</li>
+                <li>Blood sugar: 70–98 mg/dL</li>
+                <li>If metabolism is slow → affects skin, body, overall growth</li>
+            </ul>
+            <h3>Actions</h3>
+            <ul>
+                <li>Strength training</li>
+                <li>Regular walking / running / cycling</li>
+                <li>Proper food (rice, dal, vegetables, etc.)</li>
+                <li>Better sleep</li>
+                <li>More water</li>
+                <li>Reduce stress</li>
+            </ul>
+            <h3>Diet Plan</h3>
+            <ul>
+                <li>Cool water, Egg, Milk, Fish, Vegetables, Sleep, Banana, Low sugar</li>
+                <li>Avoid cola, Avoid junk food</li>
+                <li>Komola (orange), Apple, Dal, Meat, Ruti</li>
+                <li>Protein (regular must-have): chickpeas 100g/24g, Peanut 100g/24g, 3 Eggs/10g, Milk/7g</li>
+            </ul>
+            <h3>Hormones Information</h3>
+            <p style="margin: 0.5rem 0 0.25rem; color: #334155; font-weight: 600;">Testosterone</p>
+            <ul>
+                <li>Strength training (push-up, squat, pull-up), Sprint / HIIT, Regular exercise</li>
+                <li>Best time: 7–9 AM</li>
+                <li>Healthy food → protein, egg, fish, meat; Healthy fat → egg yolk</li>
+                <li>Zinc + Vitamin D, Sun exposure, Good BMR, Low stress</li>
+                <li>7–9 hours sleep, Low junk food, Low coffee</li>
+                <li>Avoid: Masturbation, Late sleep, Smoking, Alcohol, Junk food, Long mobile/desktop screen time</li>
+            </ul>
+            <p style="margin: 0.5rem 0 0.25rem; color: #334155; font-weight: 600;">Prolactin</p>
+            <ul>
+                <li>Low stress, More sleep, Exercise, Healthy food, No junk food, Reduce coffee</li>
+            </ul>
+            <p style="margin: 0.5rem 0 0.25rem; color: #334155; font-weight: 600;">Cortisol</p>
+            <ul>
+                <li>Early sleep, Low stress, 7–9 hours sleep, Outdoor time, Exercise, Good food</li>
+                <li>Skip screen time, Avoid long night wake-up</li>
+            </ul>
+        </section>
         <a href="index.html" class="back-to-research no-print">← Back to Research</a>
     </div>
+    <script>
+        document.querySelector('.print-summary-btn').addEventListener('click', function () {
+            document.body.classList.add('print-standalone-summary');
+            window.print();
+            document.body.classList.remove('print-standalone-summary');
+        });
+    </script>
 </body>
 </html>
